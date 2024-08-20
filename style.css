@@ -1,0 +1,56 @@
+nav{
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 992px){
+    .d-flex{
+        margin-left: 40px;
+    }
+}
+
+.navbar-brand{
+ width: 4em;
+ height: 2em;
+ margin-right: 6px;
+ margin-left: 5px;
+ padding: 10px;
+}
+
+.dropdown-menu{
+    margin-bottom: 10px;
+}
+
+.nav-item{
+    margin: 2px 5px 2px 5px;
+}
+
+.card-group{
+    padding: 0px 10px 0px 10px;
+}
+
+.card-body{
+    background-color: #f6f6f6;
+}
+
+.card-price{
+    margin-bottom: 9px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.body-title{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Futura Std', sans-serif;
+    font-weight: 750;
+    margin: 30px;
+}
+
+.btn-outline-dark{
+    margin-bottom: 15px;
+}
+
+
+
+
