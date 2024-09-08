@@ -1,3 +1,3 @@
-Proyecto BetaHub | E-commerce | JavaScript
+BetaHub & Guayerd | Proyecto: E-commerce | JavaScript
 
 Juan Manuel Martin
