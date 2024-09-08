@@ -1,21 +1,23 @@
-console.log("Julio te quiero");
+const h1 = document.querySelector(".body-title");
 
-/* ---- */
+h1.innerText = "Productos";
 
-const h5 = document.querySelector("h5");
+const array = [];
 
-const text = document.querySelector(".card-text");
+for (i = 1; i < 9; i++){
 
-const update = document.querySelector(".card-text small");
+    // array.push(`<img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg"`);
 
-const img = document.querySelector(".card img");
+    array.push(`<div class="card">
+                    <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg" class="card-img-top" alt="Nike Air Zoom Pegasus 39 Shield">
+                    <div class="card-body">
+                        <h5 class="card-title">Nike Air Zoom Pegasus 39 Shield</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit donec, eleifend aenean purus dui ornare blandit risus facilisis interdum, cum nostra vulputate sem venenatis felis facilisi.</p>
+                        <p class="card-price">$2.100</p>
+                        <button type="button" class="btn btn-outline-dark">Buy item</button>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 32 mins ago</small></p>
+                    </div>
+                </div>`)
 
-/* ---- */
-
-h5.innerText = "Nike Air Force 1 07 LX";
-
-text.innerText = "Premium materials. Aged finishes. Cushioned comfort. This AF1 model offers discreet style and adds the perfect touch to your look. With its retro basketball style and comfortable low-cut collar, we kept everything you love about this modern-style staple. Do you want to know more? A speckled midsole and fresh branding on the heel refresh every step.";
-
-img.src = "https://nikearprod.vtexassets.com/arquivos/ids/794686-800-800?width=800&height=800&aspect=true";
-
-update.innerText = "Last updated 5 mins ago";
+    document.querySelector(".card-group").innerHTML = (array);
+}
