@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {     //espera al event
     const buttons = document.querySelectorAll(".card .btn.btn-outline-dark"); //selección de todos los elementos que cumplan esa condición
 
     for (let i = 0; i < 10; i++) {      // i = 0, porque sino el primero no se modifica
-        buttons[i].innerText = `Ver más - Car ${i + 1}`; // i + 1, porque sino no conincide
+        buttons[i].innerText = `See more - Car ${i + 1}`; // i + 1, porque sino no conincide
     }
 });
 
