@@ -14,7 +14,7 @@ function dinamicCard() {
                             <h5 class="card-title">Car ${i}</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit donec, eleifend aenean purus dui ornare blandit risus facilisis interdum, cum nostra vulputate sem venenatis felis facilisi.</p>
                             <p class="card-price">$2.100</p>
-                            <button type="button" class="btn btn-outline-dark">Buy item</button>
+                            <button type="button" class="btn btn-outline-dark custom-btn-white"><a class="button-link" href="producto.html">See more</a></button>
                             <p class="card-text"><small class="text-body-secondary">Last updated 32 mins ago</small></p>
                         </div>
                     </div>`);
@@ -24,12 +24,3 @@ function dinamicCard() {
 }
 
 dinamicCard();
-
-document.addEventListener("DOMContentLoaded", function() {     //espera al evento (es decir, que esté cargada la página) para ejecturarse - función anónima
-    const buttons = document.querySelectorAll(".card .btn.btn-outline-dark"); //selección de todos los elementos que cumplan esa condición
-
-    for (let i = 0; i < 10; i++) {      // i = 0, porque sino el primero no se modifica
-        buttons[i].innerText = `See more - Car ${i + 1}`; // i + 1, porque sino no conincide
-    }
-});
-

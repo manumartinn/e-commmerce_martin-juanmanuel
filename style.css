@@ -45,7 +45,6 @@ nav{
     font-size: 24px;
 }
 
-
 .body-title{
     font-size: 40px;
     font-weight: bold;
@@ -59,11 +58,180 @@ nav{
     margin-bottom: 15px;
 }
 
+.button-link:hover{
+    color: rgb(196, 196, 196);
+}
+
 .custom-card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.button-link{
+    text-decoration: none;
+    color: black;
+}
+
+.button-white{
+    color: white;
+}
+
+.producto-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.producto-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.left-section, .center-section, .right-section {
+    flex: 1;
+}
+
+.center-section{
+    margin-left: 20px;
+}
+
+.right-section{
+    border: 2px solid rgb(204, 204, 204);
+    box-shadow: 0px 2px 10px rgba(0.1, 0.1, 0.1, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.producto-h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+.rating a {
+    font-size: 16px;
+    color: #3483fa;
+    text-decoration: none;
+}
+
+.original-price {
+    font-size: 18px;
+    color: #888;
+    text-decoration: line-through;
+    margin-top: 12px;
+}
+
+.discounted-price {
+    font-size: 28px;
+    color: #ff3e3e;
+}
+
+.discount {
+    font-size: 16px;
+    color: #888;
+}
+
+.installments {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.primary-btn {
+    background-color: #3483fa;
+    border: 2px solid #3483fa;
+    color: white;
+}
+
+.primary-btn:hover{
+    background-color: white;
+    color: #3483fa;
+    border: 2px solid #3483fa;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #3483fa;
+    border: 2px solid #3483fa;
+    margin-left: 10px;
+}
+
+.secondary-btn:hover{
+    background-color: #3483fa;
+    color: white;
+}
+
+.shipping-info{
+    margin-top: 5px;
+}
+
+.shipping-info h3 {
+    font-size: 18px;
+    color: #34a853;
+}
+
+.shipping-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.quantity-selector {
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+}
+
+.quantity-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.quantity-dropdown {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantity-dropdown:focus {
+    outline: none;
+    border-color: #3483fa;
+}
+
+.quantity-dropdown option {
+    padding: 10px;
+}
+
 
 
 
