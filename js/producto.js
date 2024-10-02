@@ -1,34 +1,25 @@
-class Productos{
-    constructor(titulo, detalle, precio, precioDes, stock, imagen){
-        this.titulo = titulo;
-        this.detalle = detalle;
-        this.precio = precio;
-        this.precioDes = precioDes;
-        this.stock = stock;
-        this.imagen = imagen;
-    }
-}
-
-const car = new Productos("Car 1", "Toyota Corolla", "$50.000", "$25.000", 25, "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/1.jpg");
-
 const main = document.querySelector("main");
+
+const elemento = window.location.search.split("=")[1];
+
+const carFind = autos.find((autos) => autos.id == elemento);
 
 let etiquetas = `<div class="producto-container">
     <div class="producto-main">
         <div class="left-section">
-            <img src="${car.imagen}" alt="Zenbook Pro 14" id="main-image">
+            <img src="${carFind.url}" alt="Car ${carFind.id}" id="main-image">
         </div>
 
         <div class="center-section">
             <div class="product-info">
-                <h1 class="producto-h1">${car.titulo}</h1>
-                <p class="description">${car.detalle}</p>
+                <h1 class="producto-h1">${carFind.modelo}</h1>
+                <p class="description">${carFind.descripcion}</p>
                 <div class="rating">
                     <span>⭐⭐⭐⭐⭐</span> <a href="#">(3)</a>
                 </div>
-                <p class="original-price">${car.precio}</p>
-                <p class="discounted-price">${car.precioDes} <span class="discount">(5% OFF)</span></p>
-                <p class="installments">In 6 installments of $673,799.78</p>
+                <p class="original-price">$100.000</p>
+                <p class="discounted-price">$${carFind.precio} <span class="discount">(5% OFF)</span></p>
+                <p class="installments">In 6 installments of $3,799.78</p>
             </div>
         </div>
 
@@ -36,7 +27,7 @@ let etiquetas = `<div class="producto-container">
             <div class="shipping-info">
                 <h3>Free Standard International Shipping.</h3>
                 <p>Estimated between Tue, Oct 22 and Wed, Nov 6.</p>
-                <p class="bold">${car.stock} available</p>
+                <p class="bold">${carFind.stock} available</p>
                 <div class="quantity-selector">
                     <label for="quantity" class="quantity-label">Quantity:</label>
                     <select id="quantity" class="quantity-dropdown">
