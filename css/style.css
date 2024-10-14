@@ -28,21 +28,39 @@ nav{
     padding: 0px 10px 0px 10px;
 }
 
-.card-body{
+.card-body {
     background-color: #f6f6f6;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 
 .card{
     margin-bottom: 20px;
     margin-left: 20px;
-    width: 30%;
+    width: calc(30% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .card-price{
     margin-bottom: 9px;
     font-weight: bold;
     font-size: 24px;
+}
+
+.custom-btn-white {
+    width: auto;
+    align-self: flex-start;
 }
 
 .body-title{
@@ -231,6 +249,7 @@ nav{
 .quantity-dropdown option {
     padding: 10px;
 }
+
 
 
 

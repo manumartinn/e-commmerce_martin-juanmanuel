@@ -13,7 +13,7 @@ let etiquetas = `<div class="producto-container">
         <div class="center-section">
             <div class="product-info">
                 <h1 class="producto-h1">${carFind.modelo}</h1>
-                <p class="description">${carFind.descripcion}</p>
+                <p class="description">${carFind.descripcion.split(0,40)}...</p>
                 <div class="rating">
                     <span>⭐⭐⭐⭐⭐</span> <a href="#">(3)</a>
                 </div>

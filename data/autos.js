@@ -2,7 +2,7 @@ const autos = [
     {
     id: 1,
     modelo: "Tundra",
-    descripcion: "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+    descripcion: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. Sapien urna pretium nisl ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "34.000",
     stock: 23,
     update: 11,
@@ -10,7 +10,7 @@ const autos = [
   }, {
     id: 2,
     modelo: "Mustang II",
-    descripcion: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    descripcion: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "62.000",
     stock: 12,
     update: 12,
@@ -18,7 +18,7 @@ const autos = [
   }, {
     id: 3,
     modelo: "BMW M3",
-    descripcion: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo lacinia eget tincidunt eget tempus vel pede.",
+    descripcion: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     precio: "14.000",
     stock: 5,
     update: 13,
@@ -26,7 +26,7 @@ const autos = [
   }, {
     id: 4,
     modelo: "Rio 2007",
-    descripcion: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    descripcion: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. Sapien urna pretium nisl ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "66.000",
     stock: 8,
     update: 14,
@@ -34,7 +34,7 @@ const autos = [
   }, {
     id: 5,
     modelo: "Ram Van B250",
-    descripcion: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo lacinia eget tincidunt eget tempus vel pede.",
+    descripcion: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "99.000",
     stock: 92,
     update: 15,
@@ -42,7 +42,7 @@ const autos = [
   }, {
     id: 6,
     modelo: "Econoline E150",
-    descripcion: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+    descripcion: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     precio: "23.000",
     stock: 74,
     update: 22,
