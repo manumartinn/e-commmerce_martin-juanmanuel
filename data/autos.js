@@ -5,6 +5,7 @@ const autos = [
     descripcion: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. Sapien urna pretium nisl ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "34.000",
     stock: 23,
+    categoria: "Luxury",
     update: 11,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/1.jpg`,
   }, {
@@ -13,6 +14,7 @@ const autos = [
     descripcion: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "62.000",
     stock: 12,
+    categoria: "Sport",
     update: 12,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/2.jpg`,
   }, {
@@ -21,6 +23,7 @@ const autos = [
     descripcion: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     precio: "14.000",
     stock: 5,
+    categoria: "Luxury",
     update: 13,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/3.jpg`,
   }, {
@@ -29,6 +32,7 @@ const autos = [
     descripcion: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. Sapien urna pretium nisl ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "66.000",
     stock: 8,
+    categoria: "Sport",
     update: 14,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/4.jpg`,
   }, {
@@ -37,6 +41,7 @@ const autos = [
     descripcion: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "99.000",
     stock: 92,
+    categoria: "Classic",
     update: 15,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/5.jpg`,
   }, {
@@ -45,6 +50,7 @@ const autos = [
     descripcion: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     precio: "23.000",
     stock: 74,
+    categoria: "Luxury",
     update: 22,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/6.jpg`,
   }, {
@@ -53,6 +59,7 @@ const autos = [
     descripcion: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. Sapien urna pretium nisl ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "54.000",
     stock: 34,
+    categoria: "Classic",
     update: 32,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/7.jpg`,
   }, {
@@ -61,6 +68,7 @@ const autos = [
     descripcion: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     precio: "63.000",
     stock: 3,
+    categoria: "Classic",
     update: 19,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/8.jpg`,
   }, {
@@ -69,6 +77,7 @@ const autos = [
     descripcion: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     precio: "52.000",
     stock: 32,
+    categoria: "Sport",
     update: 24,
     url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/9.jpg`,
   }];

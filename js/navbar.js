@@ -1,9 +1,11 @@
 const header = document.querySelector("header");
 
 let nav = [
-    { texto: "Home", href: "index.html" },
-    { texto: "History", href: "#" },
-    { texto: "Pricing", href: "#" },
+    { texto: "Home", function: "reloadPage" },
+    { texto: "Classic", function: "cardsClassic" },
+    { texto: "Sports", function: "cardsSports" },
+    { texto: "Luxury", function: "cardsLuxury" },
+    { texto: "View all cars", function: "viewAllCars" },
 ];
 
 let menu = [];
@@ -20,15 +22,16 @@ menu.push(`
 `);
 
 for (let boton of nav) {
-    menu.push(`<li class="nav-item"><a class="nav-link" href="${boton.href}">${boton.texto}</a></li>`);
+    menu.push(`<li class="nav-item"><a class="nav-link" href="#" onclick="${boton.function}">${boton.texto}</a></li>`);
 }
 
 menu.push(`
         </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div class="d-flex">
+            <input class="form-control me-2" placeholder="Find what you need..." id="inputSearch">
+            <button class="btn btn-outline-success" id="buttonSearch">Search</button>
+            <button class="btn btn-outline-danger" id="buttonClear">Clear</button>
+        </div>
       </div>
     </div>
   </nav>

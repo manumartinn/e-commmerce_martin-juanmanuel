@@ -47,9 +47,6 @@ nav{
 .card-img{
     height: auto;
     width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
 }
 
 .card-price{
@@ -248,6 +245,10 @@ nav{
 
 .quantity-dropdown option {
     padding: 10px;
+}
+
+.btn-outline-danger{
+    margin-left: 0.7em;
 }
 
 

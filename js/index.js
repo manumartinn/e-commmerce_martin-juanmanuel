@@ -1,8 +1,8 @@
 const h1 = document.querySelector("h1");
 
-const section = document.querySelector("section");
-
 h1.innerText = "Productos";
+
+const section = document.querySelector("section");
 
 const cards = autos.map((auto) =>
                     `<div class="card"> 
