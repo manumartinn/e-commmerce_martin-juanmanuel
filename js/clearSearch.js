@@ -2,7 +2,7 @@ const buttonClear = document.getElementById("buttonClear");
 
 const clearInputText = () => {
     inputSearch.value = "";
-    section.innerHTML = cards.join().replaceAll(",", "");
+    mostrarCards(autos);
 };
 
 buttonClear.addEventListener("click", clearInputText);
