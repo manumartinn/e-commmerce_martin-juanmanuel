@@ -2,18 +2,22 @@ nav{
     margin-bottom: 30px;
 }
 
-@media screen and (min-width: 992px){
-    .d-flex{
-        margin-left: 40px;
-    }
+.d-flex{
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+}
+
+#inputSearch{
+    width: 30%;
 }
 
 .navbar-brand{
- width: 4em;
- height: 2em;
- margin-right: 6px;
- margin-left: 5px;
- padding: 10px;
+    width: 4em;
+    height: 2em;
+    margin-right: 6px;
+    margin-left: 5px;
+    padding: 10px;
 }
 
 .dropdown-menu{

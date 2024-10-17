@@ -7,7 +7,6 @@ const autos = [
     stock: 23,
     categoria: "Luxury",
     update: 11,
-    url: `1.jpg`,
   }, {
     id: 2,
     modelo: "Mustang II",
@@ -16,7 +15,6 @@ const autos = [
     stock: 12,
     categoria: "Sport",
     update: 12,
-    url: `2.jpg`,
   }, {
     id: 3,
     modelo: "BMW M3",
@@ -25,7 +23,6 @@ const autos = [
     stock: 5,
     categoria: "Luxury",
     update: 13,
-    url: `3.jpg`,
   }, {
     id: 4,
     modelo: "Rio 2007",
@@ -34,7 +31,6 @@ const autos = [
     stock: 8,
     categoria: "Sport",
     update: 14,
-    url: `4.jpg`,
   }, {
     id: 5,
     modelo: "Ram Van B250",
@@ -43,7 +39,6 @@ const autos = [
     stock: 92,
     categoria: "Classic",
     update: 15,
-    url: `5.jpg`,
   }, {
     id: 6,
     modelo: "Econoline E150",
@@ -52,7 +47,6 @@ const autos = [
     stock: 74,
     categoria: "Luxury",
     update: 22,
-    url: `6.jpg`,
   }, {
     id: 7,
     modelo: "Rabbit 256",
@@ -61,7 +55,6 @@ const autos = [
     stock: 34,
     categoria: "Classic",
     update: 32,
-    url: `7.jpg`,
   }, {
     id: 8,
     modelo: "Corvette 928",
@@ -70,7 +63,6 @@ const autos = [
     stock: 3,
     categoria: "Classic",
     update: 19,
-    url: `8.jpg`,
   }, {
     id: 9,
     modelo: "Intrepid",
@@ -79,5 +71,4 @@ const autos = [
     stock: 32,
     categoria: "Sport",
     update: 24,
-    url: `9.jpg`,
   }];

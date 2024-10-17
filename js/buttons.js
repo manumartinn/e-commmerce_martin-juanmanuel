@@ -10,17 +10,21 @@ const filterAutosCategory = (category) => {
 
 classicButton.addEventListener("click", () => {
     filterAutosCategory("Classic");
+    h1.innerText = "Classic";
 });
 
 sportsButton.addEventListener("click", () => {
     filterAutosCategory("Sport");
+    h1.innerText = "Sport";
 });
 
 luxuryButton.addEventListener("click", () => {
     filterAutosCategory("Luxury");
+    h1.innerText = "Luxury";
 });
 
 allCarsButton.addEventListener("click", () => {
     mostrarCards(autos);
+    h1.innerText = "Productos";
 });
 

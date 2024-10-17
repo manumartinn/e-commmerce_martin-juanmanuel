@@ -7,7 +7,7 @@ const carFind = autos.find((autos) => autos.id == elemento);
 let etiquetas = `<div class="producto-container">
     <div class="producto-main">
         <div class="left-section">
-            <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${carFind.url}" alt="Car ${carFind.id}" id="main-image">
+            <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${carFind.id}.jpg" alt="Car ${carFind.id}" id="main-image">
         </div>
 
         <div class="center-section">
