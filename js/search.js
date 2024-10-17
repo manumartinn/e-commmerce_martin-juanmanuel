@@ -5,12 +5,10 @@ const filterAutos = () => {
     const filtered = autos.filter(auto => auto.modelo.toLowerCase() === inputSearch.value.toLowerCase());
     
     if (filtered.length == 1) {
-        const filterData = filtered[0].modelo;
-
         const cardsFiltered = filtered.map((auto) =>
             `<div class="card"> 
                 <div class="card-img"> 
-                    <img src="${auto.url}" class="card-img-top" alt="Nike Air Zoom Pegasus 39 Shield">
+                    <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${auto.url}" class="card-img-top" alt="Nike Air Zoom Pegasus 39 Shield">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">${auto.modelo}</h5>

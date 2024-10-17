@@ -7,7 +7,7 @@ const autos = [
     stock: 23,
     categoria: "Luxury",
     update: 11,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/1.jpg`,
+    url: `1.jpg`,
   }, {
     id: 2,
     modelo: "Mustang II",
@@ -16,7 +16,7 @@ const autos = [
     stock: 12,
     categoria: "Sport",
     update: 12,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/2.jpg`,
+    url: `2.jpg`,
   }, {
     id: 3,
     modelo: "BMW M3",
@@ -25,7 +25,7 @@ const autos = [
     stock: 5,
     categoria: "Luxury",
     update: 13,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/3.jpg`,
+    url: `3.jpg`,
   }, {
     id: 4,
     modelo: "Rio 2007",
@@ -34,7 +34,7 @@ const autos = [
     stock: 8,
     categoria: "Sport",
     update: 14,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/4.jpg`,
+    url: `4.jpg`,
   }, {
     id: 5,
     modelo: "Ram Van B250",
@@ -43,7 +43,7 @@ const autos = [
     stock: 92,
     categoria: "Classic",
     update: 15,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/5.jpg`,
+    url: `5.jpg`,
   }, {
     id: 6,
     modelo: "Econoline E150",
@@ -52,7 +52,7 @@ const autos = [
     stock: 74,
     categoria: "Luxury",
     update: 22,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/6.jpg`,
+    url: `6.jpg`,
   }, {
     id: 7,
     modelo: "Rabbit 256",
@@ -61,7 +61,7 @@ const autos = [
     stock: 34,
     categoria: "Classic",
     update: 32,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/7.jpg`,
+    url: `7.jpg`,
   }, {
     id: 8,
     modelo: "Corvette 928",
@@ -70,7 +70,7 @@ const autos = [
     stock: 3,
     categoria: "Classic",
     update: 19,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/8.jpg`,
+    url: `8.jpg`,
   }, {
     id: 9,
     modelo: "Intrepid",
@@ -79,5 +79,5 @@ const autos = [
     stock: 32,
     categoria: "Sport",
     update: 24,
-    url: `https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/9.jpg`,
+    url: `9.jpg`,
   }];
