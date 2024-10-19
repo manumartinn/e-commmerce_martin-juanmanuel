@@ -7,8 +7,10 @@ const section = document.querySelector("section");
 const mostrarCards = (autos) => {
     const cards = autos.map((auto) =>
         `<div class="card"> 
-            <div class="card-img"> 
-                <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${auto.id}.jpg" class="card-img-top" alt="Nike Air Zoom Pegasus 39 Shield">
+            <div class="card-img-wrapper"> 
+                <div class="card-img"> 
+                    <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${auto.id}.jpg" class="card-img-top" alt="Nike Air Zoom Pegasus 39 Shield">
+                </div>
             </div>
             <div class="card-body">
                 <h5 class="card-title">${auto.modelo}</h5>
