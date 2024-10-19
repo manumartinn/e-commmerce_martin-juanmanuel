@@ -1,24 +1,24 @@
 const main = document.querySelector("main");
 
-const elemento = window.location.search.split("=")[1];
+const element = window.location.search.split("=")[1];
 
-const carFind = autos.find((autos) => autos.id == elemento);
+const carFind = cars.find((cars) => cars.id == element);
 
-let etiquetas = `<div class="producto-container">
-    <div class="producto-main">
+let labels = `<div class="product-container">
+    <div class="product-main">
         <div class="left-section">
             <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${carFind.id}.jpg" alt="Car ${carFind.id}" id="main-image">
         </div>
 
         <div class="center-section">
             <div class="product-info">
-                <h1 class="producto-h1">${carFind.modelo}</h1>
-                <p class="description">${carFind.descripcion.split(0,40)}...</p>
+                <h1 class="product-h1">${carFind.model}</h1>
+                <p class="description">${carFind.description.split(0,40)}...</p>
                 <div class="rating">
                     <span>⭐⭐⭐⭐⭐</span> <a href="#">(3)</a>
                 </div>
                 <p class="original-price">$100.000</p>
-                <p class="discounted-price">$${carFind.precio} <span class="discount">(5% OFF)</span></p>
+                <p class="discounted-price">$${carFind.price} <span class="discount">(5% OFF)</span></p>
                 <p class="installments">In 6 installments of $3,799.78</p>
             </div>
         </div>
@@ -45,4 +45,8 @@ let etiquetas = `<div class="producto-container">
     </div>
 </div>`;
 
-main.innerHTML = etiquetas;
+main.innerHTML = labels;
+
+//!----------------------------------------------
+
+document.title = `Nike | ${carFind.model}`;

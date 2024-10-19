@@ -1,11 +1,11 @@
 const header = document.querySelector("header");
 
 let nav = [
-    { texto: "Home", function: "home" },
-    { texto: "Classic", function: "cardsClassic" },
-    { texto: "Sports", function: "cardsSports" },
-    { texto: "Luxury", function: "cardsLuxury" },
-    { texto: "View all cars", function: "viewAllCars" },
+    { text: "Home", function: "home" },
+    { text: "Classic", function: "cardsClassic" },
+    { text: "Sports", function: "cardsSports" },
+    { text: "Luxury", function: "cardsLuxury" },
+    { text: "View all cars", function: "viewAllCars" },
 ];
 
 let menu = [];
@@ -22,7 +22,7 @@ menu.push(`
 `);
 
 for (let boton of nav) {
-    menu.push(`<li class="nav-item"><a class="nav-link" id="button${boton.function}" href="#">${boton.texto}</a></li>`);
+    menu.push(`<li class="nav-item"><a class="nav-link" id="button${boton.function}" href="#">${boton.text}</a></li>`);
 }
 
 menu.push(`

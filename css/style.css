@@ -113,13 +113,13 @@ nav{
     color: white;
 }
 
-.producto-container {
+.product-container {
     max-width: 1140px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.producto-main {
+.product-main {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -151,7 +151,7 @@ nav{
     border-radius: 10px;
 }
 
-.producto-h1 {
+.product-h1 {
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -272,6 +272,16 @@ nav{
     margin-left: 0.7em;
 }
 
+#buttonClear{
+    display: none;
+}
+
+.text-uppercase{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Futura Std', sans-serif;
+    font-weight: 600;
+}
 
 
 
