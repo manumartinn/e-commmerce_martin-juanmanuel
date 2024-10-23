@@ -18,7 +18,7 @@ const showCards = (cars) => {
                 <p class="card-text">${car.description.split(0,40)}...</p>
                 <p class="card-price">$${car.price}</p>
                 <p>Stock: ${car.stock}</p>
-                <button type="button" class="btn btn-outline-dark custom-btn-white"><a class="button-link" href="../pages/producto.html?prod=${car.id}">See more</a></button>
+                <a class="button-link" href="../pages/producto.html?prod=${car.id}"><button type="button" class="btn btn-outline-dark custom-btn-white">See more</button></a>
                 <p class="card-text"><small class="text-body-secondary">Last updated ${car.update} mins ago</small></p>
             </div>
         </div>`);
