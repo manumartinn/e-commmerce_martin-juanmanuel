@@ -27,10 +27,16 @@ for (let boton of nav) {
 
 menu.push(`
         </ul>
-        <div class="d-flex">
+        <div class="d-flex" style="margin-left: 2%">
             <input class="form-control me-2" placeholder="Find what you need..." id="inputSearch">
             <button class="btn btn-outline-success" id="buttonSearch">Search</button>
             <button class="btn btn-outline-danger" id="buttonClear">Clear</button>
+            <ul class="navbar-nav d-flex">
+          ${localStorage.getItem("email")
+            ? `<p class="helloUser">Hola, ${localStorage.getItem("email")}</p><span style="color: white; margin-left: 10px; margin-right: 10px;">|</span><p onclick="closeSession()" class="closeSession">Cerrar sesion</p>`
+            : `<span>a</span><button class="btn btn-outline-primary signin-btn" onclick="location.href='../pages/login.html'">Iniciar sesion</button>`
+          }
+          </ul>
         </div>
       </div>
     </div>
@@ -46,3 +52,10 @@ const homeButton = document.querySelector("#buttonhome");
 homeButton.addEventListener("click", () => {
     window.location.href = "index.html";
 });
+
+//!------------------------------------------------------------------------------------
+
+function closeSession(){
+  localStorage.clear();
+  location.href = "../pages/index.html";
+}

@@ -1,5 +1,9 @@
-const itemEmail = localStorage.getItem("email");
+const checkSession = () => {
+    if (localStorage.getItem("email")){
+        location.href = "./index.html";
+    };
+}
 
-if (itemEmail.length > 0){
-    window.location.href = "./index.html";
-};
+checkSession();
+
+
