@@ -9,7 +9,9 @@ const handleSubmitLogin = ev => {
         
     if (user_login.email === inputEmail && user_login.password === inputPass) {
         localStorage.setItem("email", inputEmail);
-        window.location.href = "./index.html";
+        localStorage.setItem("cart", JSON.stringify([]));
+        localStorage.setItem("quantity", "0");
+        location.href = "./index.html";
     } else {
         form.style.display = "none";
         p.style.display = "flex"

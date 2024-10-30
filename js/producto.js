@@ -32,12 +32,12 @@ let labels = `<div class="product-container">
                 ${localStorage.getItem("email")
                     ? `<div class="counter-container">
                         <button class="buttonCounter" onclick="decrementCounter()">-</button>
-                        <div class="value" id="value">0</div>
+                        <div class="value" id="value">1</div>
                         <button class="buttonCounter" onclick="increaseCounter()">+</button>
                        </div>
                        <div class="buy-container">
                        <button class="btn primary-btn">Buy it now</button>
-                       <button class="btn secondary-btn">Add to cart</button>
+                       <button class="btn secondary-btn" onclick="addItems()">Add to cart</button>
                        </div>`
                     : `<button class="btn primary-btn" onclick="location.href='../pages/login.html'">Sign in to buy</button>`
                 }
@@ -55,7 +55,7 @@ document.title = `Nike | ${carFind.model}`;
 
 //!----------------------------------------------
 
-let counter = 0;
+let counter = 1;
 
 function increaseCounter() {
     if (counter < carFind.stock) {
@@ -65,8 +65,43 @@ function increaseCounter() {
 }
 
 function decrementCounter() {
-    if (counter > 0 && counter <= carFind.stock) {
+    if (counter > 1 && counter <= carFind.stock) {
         counter--;
         document.getElementById("value").innerText = counter;
     }
+}
+
+function addItems() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const idProduct = Number(window.location.search.split("=")[1]);
+
+    //creamos el objeto que contendrá el producto a añadir
+    const productToAdd = {
+        id: carFind.id,
+        model: carFind.model,
+        category: carFind.category,
+        price: carFind.price,
+        quantity: counter,
+    };
+
+    // verificamos si el producto ya existe en el carrito
+    const existingProduct = cart.find(product => product.id === idProduct);
+
+    if (existingProduct) {
+        // si el producto existe, modifica el quantity
+        existingProduct.quantity += counter;
+    } else {
+        // si no existe, lo pushea
+        cart.push(productToAdd);
+    }
+
+    // guardamos el carrito actualizado en el localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // actualizar la cantidad total de productos en el carrito
+    let totalQuantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0);
+    localStorage.setItem("quantity", totalQuantity);
+
+    const quantityTag = document.querySelector("#quantity");
+    quantityTag.innerText = totalQuantity;
 }
