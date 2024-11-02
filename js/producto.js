@@ -32,7 +32,7 @@ let labels = `<div class="product-container">
                 ${localStorage.getItem("email")
                     ? `<div class="counter-container">
                         <button class="buttonCounter" onclick="decrementCounter()">-</button>
-                        <div class="value" id="value">1</div>
+                        <div class="value" id="counterValue">1</div>
                         <button class="buttonCounter" onclick="increaseCounter()">+</button>
                        </div>
                        <div class="buy-container">
@@ -54,45 +54,44 @@ main.innerHTML = labels;
 document.title = `Nike | ${carFind.model}`;
 
 //!----------------------------------------------
+let counterValue = document.getElementById("counterValue");
 
 let counter = 1;
 
 function increaseCounter() {
     if (counter < carFind.stock) {
         counter++;
-        document.getElementById("value").innerText = counter;
+        counterValue.innerText = counter;
     }
 }
 
 function decrementCounter() {
     if (counter > 1 && counter <= carFind.stock) {
         counter--;
-        document.getElementById("value").innerText = counter;
+        counterValue.innerText = counter;
     }
 }
 
 function addItems() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     const idProduct = Number(window.location.search.split("=")[1]);
 
-    //creamos el objeto que contendrá el producto a añadir
-    const productToAdd = {
-        id: carFind.id,
-        model: carFind.model,
-        category: carFind.category,
-        price: carFind.price,
-        quantity: counter,
-    };
+    const product = cars.find(item => item.id === idProduct);
 
-    // verificamos si el producto ya existe en el carrito
-    const existingProduct = cart.find(product => product.id === idProduct);
+    const existingIdProduct = cart.some(item => item.product.id === idProduct);
 
-    if (existingProduct) {
-        // si el producto existe, modifica el quantity
-        existingProduct.quantity += counter;
+    if (existingIdProduct) {
+        cart = cart.map(item => {
+            if (item.product.id === idProduct){
+                return {... item, quantity: item.quantity + counter}
+            } else {
+                return item
+            }
+        })
     } else {
         // si no existe, lo pushea
-        cart.push(productToAdd);
+        cart.push({product: product, quantity: counter});
     }
 
     // guardamos el carrito actualizado en el localStorage

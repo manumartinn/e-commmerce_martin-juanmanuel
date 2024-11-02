@@ -1,0 +1,59 @@
+nav{
+    margin-bottom: 30px;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: flex-end;
+    width: 92%;
+}
+
+.d-flex-correction{
+    width: 100%;
+}
+
+.navbar-brand{
+    width: 4em;
+    height: 2em;
+    margin-right: 6px;
+    margin-left: 5px;
+    padding: 10px;
+}
+
+section {
+    flex: 1;
+    width: 100%;
+}
+
+img{
+    height: 170px;
+    width: 320px;
+}
+
+.cartPrice{
+    width: 550px;
+}
+
+.helloUser{
+    color: white;
+    margin-left: 3%;
+}
+
+.closeSession{
+    color:#f44336;
+    cursor: pointer;
+}
+
+.buttonLink{
+    text-decoration: none;
+    color: black;
+}
+
+.buttonLink:hover{
+    color: #868686;
+}   
+
+.buttonLink:active{
+    border: 0px;
+    color: #5f5f5f;
+}
