@@ -36,10 +36,10 @@ let labels = `<div class="product-container">
                         <button class="buttonCounter" onclick="increaseCounter()">+</button>
                        </div>
                        <div class="buy-container">
-                       <button class="btn primary-btn">Buy it now</button>
-                       <button class="btn secondary-btn" onclick="addItems()">Add to cart</button>
+                       <button class="btn primary-btn"><span class="material-symbols-outlined">shopping_bag</span>Buy it now</button>
+                       <button class="btn secondary-btn" onclick="addItems()"><span class="material-symbols-outlined">add_shopping_cart</span>Add to cart</button>
                        </div>`
-                    : `<button class="btn primary-btn" onclick="location.href='../pages/login.html'">Sign in to buy</button>`
+                    : `<button class="btn primary-btn" onclick="location.href='../pages/login.html'"><span class="material-symbols-outlined">person</span>Sign in to buy</button>`
                 }
             
 
@@ -73,34 +73,58 @@ function decrementCounter() {
 }
 
 function addItems() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    function add(){
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    const idProduct = Number(window.location.search.split("=")[1]);
-
-    const product = cars.find(item => item.id === idProduct);
-
-    const existingIdProduct = cart.some(item => item.product.id === idProduct);
-
-    if (existingIdProduct) {
-        cart = cart.map(item => {
-            if (item.product.id === idProduct){
-                return {... item, quantity: item.quantity + counter}
-            } else {
-                return item
-            }
-        })
-    } else {
-        // si no existe, lo pushea
-        cart.push({product: product, quantity: counter});
+        const idProduct = Number(window.location.search.split("=")[1]);
+    
+        const product = cars.find(item => item.id === idProduct);
+    
+        const existingIdProduct = cart.some(item => item.product.id === idProduct);
+    
+        if (existingIdProduct) {
+            cart = cart.map(item => {
+                if (item.product.id === idProduct){
+                    return {... item, quantity: item.quantity + counter}
+                } else {
+                    return item
+                }
+            })
+        } else {
+            // si no existe, lo pushea
+            cart.push({product: product, quantity: counter});
+        }
+    
+        // guardamos el carrito actualizado en el localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+    
+        // actualizar la cantidad total de productos en el carrito
+        let totalQuantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0);
+        localStorage.setItem("quantity", totalQuantity);
+    
+        const quantityTag = document.querySelector("#quantity");
+        quantityTag.innerText = totalQuantity;
     }
 
-    // guardamos el carrito actualizado en el localStorage
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    // actualizar la cantidad total de productos en el carrito
-    let totalQuantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0);
-    localStorage.setItem("quantity", totalQuantity);
-
-    const quantityTag = document.querySelector("#quantity");
-    quantityTag.innerText = totalQuantity;
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, add it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          add()
+          Toastify({
+            avatar: "https://clipart-library.com/images_k/success-transparent/success-transparent-3.png",
+            text: "You added product/s to the shopping cart!",
+            style: {
+                background: "#3cb869",
+                padding: "15px",
+            },
+          }).showToast()
+        }
+      });
 }
