@@ -40,6 +40,22 @@ function getCart(cards){
                     </div>
                 </div>`);
         cardsSection.innerHTML = list.join("");
+
+        if (localStorage.getItem("quantity") >= 1){
+            const footerAll = document.querySelector(".footerAll");
+            footerAll.style.position = "relative";
+            footerAll.style.bottom = "0";
+        } else {
+            const continueShopping = document.querySelector(".col-xl-8");
+            const purchaseOrder = document.querySelector(".col-xl-4");
+            const div = document.querySelector(".row");
+            continueShopping.style.display = "none";
+            purchaseOrder.style.display = "none";
+            div.innerHTML = "<p class='cartEmpty'>Your cart is empty.</p>";
+            const footerAll = document.querySelector(".footerAll");
+            footerAll.style.position = "fixed";
+            footerAll.style.bottom = "0";
+        }
 }
 
 getCart(JSON.parse(localStorage.getItem("cart")));
@@ -77,8 +93,12 @@ function removeItem(id){
 
 function clearCart(){
     const quantityTag = document.querySelector("#quantity");
+    const footerAll = document.querySelector(".footerAll");
+    localStorage.setItem("quantity", 0);
     quantityTag.innerText = "0";
     localStorage.setItem("cart", JSON.stringify([]));
     getCart([]);
     total([]);
+    footerAll.style.position = "fixed";
+    footerAll.style.bottom = "0";
 }

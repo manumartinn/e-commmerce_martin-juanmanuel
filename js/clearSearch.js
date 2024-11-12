@@ -1,9 +1,10 @@
 const buttonClear = document.getElementById("buttonClear");
 
 const clearInputText = () => {
+    buttonClear.style.display = "none";
     inputSearch.value = "";
-    showCards(cars);
     h1.innerText = "Products";
+    showCards(cars);
 };
 
 buttonClear.addEventListener("click", clearInputText);

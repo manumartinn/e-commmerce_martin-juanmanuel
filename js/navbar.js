@@ -30,7 +30,7 @@ menu.push(`
         <div class="d-flex" style="margin-left: 2%">
             <input class="form-control me-2" placeholder="Find what you need..." id="inputSearch">
             <button class="btn btn-outline-success" id="buttonSearch"><span class="material-symbols-outlined">search</span>Search</button>
-            <button class="btn btn-outline-danger" id="buttonClear">Clear</button>
+            <button class="btn btn-outline-danger" id="buttonClear"><span class="material-symbols-outlined">delete</span>Clear</button>
             <div class="navbar-nav d-flex">
           ${localStorage.getItem("email")
             ? `<p class="helloUser">Hola, ${localStorage.getItem('email')}</p><span style="color: white; margin-left: 10px; margin-right: 10px;">|</span><a href="cart.html" style="color: white; text-decoration: none;">
