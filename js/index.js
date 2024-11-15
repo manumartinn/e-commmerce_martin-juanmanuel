@@ -1,3 +1,17 @@
+const myPromise = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("Data loaded")}, 3000)
+});
+
+myPromise
+    .then(result => {
+        document.querySelector(".loader").style.display = "none";
+        document.querySelector(".container").style.display = "flex";
+        document.querySelector(".footerAll").style.position = "relative";
+        footerAll.style.bottom = "0";
+    })
+    .catch(error => {console.error("Error loading data", error);})
+
 const h1 = document.querySelector("h1");
 
 h1.innerText = "Products";

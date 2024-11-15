@@ -103,7 +103,7 @@ nav{
 }
 
 .custom-card-container {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -396,7 +396,7 @@ nav{
     flex: 1;
     text-align: center;
     font-size: 24px;
-    color: #333;
+    color: #333333;
   }
 
   .buy-container{
@@ -416,3 +416,31 @@ nav{
     'opsz' 24
   }
 
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #333;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+.footerAll{
+    margin-top: 5%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

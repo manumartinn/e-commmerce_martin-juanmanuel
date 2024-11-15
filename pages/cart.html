@@ -27,12 +27,12 @@
                 <section id="cards"></section>
               <div class="row my-4">
                <div class="col-sm-6">
-                <a href="../pages/index.html" style="color: #868686;"><button class="btn buttonLink">Seguir comprando</button></a>
+                <a href="../pages/index.html" style="color: #868686;"><button class="btn buttonLink">Continue shopping</button></a>
                </div>
                <div class="col-sm-6">
                 <div class="text-sm-end mt-2 mt-sm-0">
                  <button id="btn-clearCart" class="btn btn-danger" onclick="clearCart()"><span class="material-symbols-outlined">remove_shopping_cart</span>Clear Cart</button>
-                 <button id="btn-checkout" class="btn btn-success"><span class="material-symbols-outlined">
+                 <button id="btn-checkout" class="btn btn-success" onclick="checkout()"><span class="material-symbols-outlined">
                   approval_delegation
                   </span>Checkout</button>
                 </div>
@@ -43,14 +43,14 @@
               <div class="mt-5 mt-lg-0">
                <div class="card border shadow-none">
                 <div class="card-header bg-transparent border-bottom py-3 px-4">
-                 <h5 class="font-size-16 mb-0">Orden de Compra</h5>
+                 <h5 class="font-size-16 mb-0">Purchase order</h5>
                 </div>
                 <div class="card-body p-4 pt-2">
                  <div class="table-responsive">
                   <table class="table mb-0">
                    <tbody>
                     <tr class="bg-light">
-                     <th>Total :</th>
+                     <th>Total:</th>
                      <td class="text-end">
                       <span class="fw-bold" id="cart-total"> $ 0 </span>
                      </td>
@@ -71,5 +71,6 @@
         <script src="../js/cart.js"></script>
         <script src="../js/navbar.js"></script>
         <script src="../js/footer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>
