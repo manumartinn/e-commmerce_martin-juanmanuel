@@ -36,7 +36,7 @@ let labels = `<div class="product-container">
                         <button class="buttonCounter" onclick="increaseCounter()">+</button>
                        </div>
                        <div class="buy-container">
-                       <button class="btn primary-btn"><span class="material-symbols-outlined">shopping_bag</span>Buy it now</button>
+                       <button onclick='buyItem()'class="btn primary-btn"><span class="material-symbols-outlined">shopping_bag</span>Buy it now</button>
                        <button class="btn secondary-btn" onclick="addItems()"><span class="material-symbols-outlined">add_shopping_cart</span>Add to cart</button>
                        </div>`
                     : `<button class="btn primary-btn" onclick="location.href='../pages/login.html'"><span class="material-symbols-outlined">person</span>Sign in to buy</button>`
@@ -127,4 +127,98 @@ function addItems() {
           }).showToast()
         }
       });
-}
+};
+
+
+function checkout(){
+    const recurso = {
+        user: localStorage.getItem("email"),
+        items: JSON.parse(localStorage.getItem("cart")),
+    };
+
+    fetch("https://67367b22aafa2ef22230a09c.mockapi.io/orders/cart", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(recurso),
+        })
+            .then(response => {
+                if (response.status !== 201) {
+                    console.error("Error:", error);
+                    Swal.fire({
+                        text: "Oops... There was a problem. Please try again later.",
+                        confirmButtonText: "Ok",
+                        confirmButtonColor: "#333",
+                    });
+                } else {
+                    return response.json()
+                }
+            })
+            .then(order => {
+                Swal.fire({
+                    text: `Thank you ${order.user} for your purchase. We have registered your order #${order.id}`,
+                    confirmButtonText: "Ok",
+                    confirmButtonColor: "#333",
+                });
+                clearCart();
+            });
+};
+
+
+function clearCart(){
+    const quantityTag = document.querySelector("#quantity");
+    const footerAll = document.querySelector(".footerAll");
+    localStorage.setItem("quantity", 0);
+    quantityTag.innerText = "0";
+    localStorage.setItem("cart", JSON.stringify([]));
+    getCart([]);
+    total([]);
+    footerAll.style.position = "fixed";
+    footerAll.style.bottom = "0";
+};
+
+
+function buyItem(){
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, add it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            const idProduct = Number(window.location.search.split("=")[1]);
+        
+            const product = cars.find(item => item.id === idProduct);
+        
+            const existingIdProduct = cart.some(item => item.product.id === idProduct);
+        
+            if (existingIdProduct) {
+                cart = cart.map(item => {
+                    if (item.product.id === idProduct){
+                        return {... item, quantity: item.quantity + counter};
+                    } else {
+                        return item;
+                    }
+                })
+            } else {
+                // si no existe, lo pushea
+                cart.push({product: product, quantity: counter});
+            }
+        
+            // guardamos el carrito actualizado en el localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+        
+            // actualizar la cantidad total de productos en el carrito
+            let totalQuantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0);
+            localStorage.setItem("quantity", totalQuantity);
+            checkout();
+            clearCart();
+        }
+      });
+};

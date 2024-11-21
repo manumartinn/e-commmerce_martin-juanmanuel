@@ -7,7 +7,8 @@ myPromise
     .then(result => {
         document.querySelector(".loader").style.display = "none";
         document.querySelector(".container").style.display = "flex";
-        document.querySelector(".footerAll").style.position = "relative";
+        footerAll = document.querySelector(".footerAll");
+        footerAll.style.position = "relative";
         footerAll.style.bottom = "0";
     })
     .catch(error => {console.error("Error loading data", error);})

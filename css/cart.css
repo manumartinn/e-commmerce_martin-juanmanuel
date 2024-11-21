@@ -85,3 +85,7 @@ img{
     font-weight: 600;
     margin: 30px;
 }
+
+#buttonSearch, #buttonClear, #inputSearch, #buttoncardsClassic, #buttoncardsSports, #buttoncardsLuxury, #buttonviewAllCars{
+    display: none;
+  }

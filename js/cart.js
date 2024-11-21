@@ -1,4 +1,45 @@
+const buttonsCart = document.querySelector("#buttonsCart");
+const purchaseOrder = document.querySelector("#purchaseOrder");
 const cardsSection = document.querySelector("#cart #cards");
+
+function insertButtons(){
+    const actions = `<div class="text-sm-end mt-2 mt-sm-0">
+    <button id="btn-clearCart" class="btn btn-danger" onclick="clearCart()"><span class="material-symbols-outlined">remove_shopping_cart</span>Clear Cart</button>
+    <button id="btn-checkout" class="btn btn-success" onclick="checkout()"><span class="material-symbols-outlined">
+     approval_delegation
+     </span>Checkout</button>
+   </div>`
+
+    buttonsCart.innerHTML = actions;
+};
+insertButtons();
+
+function insertOrder(){
+    const order = `<div class="mt-5 mt-lg-0">
+               <div class="card border shadow-none">
+                <div class="card-header bg-transparent border-bottom py-3 px-4">
+                 <h5 class="font-size-16 mb-0">Purchase order</h5>
+                </div>
+                <div class="card-body p-4 pt-2">
+                 <div class="table-responsive">
+                  <table class="table mb-0">
+                   <tbody>
+                    <tr class="bg-light">
+                     <th>Total:</th>
+                     <td class="text-end">
+                      <span class="fw-bold" id="cart-total"> $ 0 </span>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </div>
+                </div>
+               </div>
+              </div>`
+
+    purchaseOrder.innerHTML = order;
+};
+insertOrder();
 
 function getCart(cards){
     const list = cards.map(
@@ -46,17 +87,15 @@ function getCart(cards){
             footerAll.style.position = "relative";
             footerAll.style.bottom = "0";
         } else {
-            const continueShopping = document.querySelector(".col-xl-8");
-            const purchaseOrder = document.querySelector(".col-xl-4");
-            const div = document.querySelector(".row");
-            continueShopping.style.display = "none";
+            buttonsCart.style.display = "none";
             purchaseOrder.style.display = "none";
-            div.innerHTML = "<p class='cartEmpty'>Your cart is empty.</p>";
+            const div = document.querySelector("#containerCart");
+            div.innerHTML = `<p class='cartEmpty'>Your cart is empty.</p><a href="../pages/index.html" style="color: #868686; text-align: center;"><button class="btn buttonLink">Continue shopping</button></a>`;
             const footerAll = document.querySelector(".footerAll");
             footerAll.style.position = "fixed";
             footerAll.style.bottom = "0";
         }
-}
+};
 
 getCart(JSON.parse(localStorage.getItem("cart")));
 
